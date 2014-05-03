@@ -39,9 +39,17 @@
     //Iterate through each match and apply
     $(this).each(function () {
 
-      var li_arr = new Array();
+      //Get the current class, so we can add it
+      //to the new ULs we will create.
+      cur_class = $(this).attr('class')
+      if (cur_class == undefined) {
+        cur_class = ""
+      } else {
+        cur_class = "class='" + cur_class + "' "
+      }
 
       //Create array of all posts in lists
+      var li_arr = new Array();
       $(this).find('li').each(function(){
          li_arr.push($(this).html());
       })
@@ -49,9 +57,8 @@
       //add the HTML back to the dom tree
       array_chunks = chunk(li_arr, num_columns);
       $(this).html(createHTML(array_chunks[0]));
-
       for (i = 1; i < num_columns ;i++) {
-       $(this).after('<ul></ul>').next().html(createHTML(array_chunks[i]));
+       $(this).after('<ul ' + cur_class + '></ul>').next().html(createHTML(array_chunks[i]));
       }
     });
 
