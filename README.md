@@ -7,7 +7,7 @@ Really easy to use. First include jquery. Then include jquery.columize-unordered
 
 Here's a live example of how I use this script:
 
-http://jsfiddle.net/EebVF/
+http://jsfiddle.net/EebVF/5/
 
 -------
 
