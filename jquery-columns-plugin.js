@@ -56,10 +56,11 @@
 
       //add the HTML back to the dom tree
       array_chunks = chunk(li_arr, num_columns);
-      $(this).html(createHTML(array_chunks[0]));
-      for (i = 1; i < num_columns ;i++) {
-       $(this).after('<ul ' + cur_class + '></ul>').next().html(createHTML(array_chunks[i]));
+      new_html = ""  //html(createHTML(array_chunks[0]));
+      for (i = 0; i < num_columns ;i++) {
+       new_html = new_html + '<ul ' + cur_class + '>' + createHTML(array_chunks[i]) + '</ul>';
       }
+      $(this).replaceWith(new_html)
     });
 
   };
