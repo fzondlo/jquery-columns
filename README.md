@@ -1,12 +1,6 @@
 js-cols
 =======
 
-
-
-
-js-cols
-=======================
-
 jQuery plugin that takes any unordered list and splits it into a specified number of columns. 
 
 Really easy to use. First include jquery. Then include jquery.columize-unordered-list.js
